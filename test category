@@ -1,0 +1,8 @@
+SELECT
+    c.category_name,
+    p.product_name,
+    p.price
+FROM Category c
+JOIN Product p
+    ON c.category_id = p.category_id
+ORDER BY c.category_name, p.product_name;
