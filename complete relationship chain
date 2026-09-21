@@ -1,0 +1,16 @@
+SELECT
+    c.first_name || ' ' || c.last_name AS customer,
+    o.order_id,
+    o.order_date,
+    p.product_name,
+    oi.quantity,
+    p.price,
+    (oi.quantity * p.price) AS item_total
+FROM Customer c
+JOIN CustomerOrder o
+    ON c.customer_id = o.customer_id
+JOIN OrderItem oi
+    ON o.order_id = oi.order_id
+JOIN Product p
+    ON oi.product_id = p.product_id
+ORDER BY o.order_id, p.product_name;
