@@ -1,4 +1,4 @@
--- PART 3: INDEX EVALUATION
+-- WorkItem3
 
 -- STEP 1: Run before creating the index.
 EXPLAIN ANALYZE
